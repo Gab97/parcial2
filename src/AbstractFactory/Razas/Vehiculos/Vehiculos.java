@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AbstractFactory.Razas.Edificaciones;
+package AbstractFactory.Razas.Vehiculos;
 
 /**
  *
  * @author soporte
  */
-public class FactoryEdificaciones implements Edificaciones{
-
-    @Override
-    public void crear_edificaciones() {
-        System.out.println("edificio creado :v");
-    }
-    
+public interface Vehiculos {
+    void crear_vehiculos();
 }
