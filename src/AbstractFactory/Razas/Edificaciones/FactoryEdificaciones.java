@@ -3,17 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package AbstractFactory.Razas.Edificaciones;
+import AbstractFactory.AbstractFactory;
 
-/**
- *
- * @author soporte
- */
-public class FactoryEdificaciones implements Edificaciones{
-
-    @Override
-    public void crear_edificaciones() {
-        System.out.println("edificio creado :v");
+public class FactoryEdificaciones implements AbstractFactory{
+    
+    public Edificaciones getEdificaciones(String type) {
+        switch (type) {
+            case "1":
+                return new Torre();
+            case "2":
+                return new Mina();
+            case "3":
+                //return new Raza_los_que_no_son_nada();
+        }
+        return null;
     }
     
 }

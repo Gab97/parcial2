@@ -11,4 +11,5 @@ package AbstractFactory.Razas.Edificaciones;
  */
 public interface Edificaciones {
     void crear_edificaciones();
+    void atacar_edificaciones();
 }

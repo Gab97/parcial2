@@ -9,10 +9,10 @@ package AbstractFactory.Razas;
  *
  * @author andreu
  */
-public class Raza_los_que_no_son_nada implements Razas{
+public class Raza_sin_sangre implements Razas{
 
     @Override
-    public void razas() {
-        System.out.println("Los que no son nada, listo :v");
+    public void crear_razas() {
+        System.out.println("Los que no son nada, listo");
     }
 }

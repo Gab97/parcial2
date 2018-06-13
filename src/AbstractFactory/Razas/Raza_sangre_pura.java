@@ -9,10 +9,10 @@ package AbstractFactory.Razas;
  *
  * @author andreu
  */
-public class Raza_pura_sangre implements Razas {
+public class Raza_sangre_pura implements Razas {
 
     @Override
-    public void razas() {
+    public void crear_razas() {
         System.out.println("Raza pura sangre listo :v");
     }   
 }

@@ -16,11 +16,11 @@ public class FactoryRazas implements AbstractFactory {
     public Razas getRazas(String type) {
         switch (type) {
             case "1":
-                return new Raza_pura_sangre();
+                return new Raza_sangre_pura();
             case "2":
                 return new Raza_sangre_sucia();
             case "3":
-                return new Raza_los_que_no_son_nada();
+                return new Raza_sin_sangre();
         }
         return null;
     }
