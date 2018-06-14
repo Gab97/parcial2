@@ -9,7 +9,7 @@ package AbstractFactory.Razas;
  *
  * @author andreu
  */
-public class Raza_sin_sangre implements Razas{
+public class Raza_sangre_normal implements Razas{
 
     @Override
     public void crear_razas() {

@@ -10,7 +10,6 @@ package AbstractFactory.Razas;
  * @author andreu
  */
 public interface Razas {
-    void crear_razas();
-     
-    
+
+    void crear_razas(); 
 }

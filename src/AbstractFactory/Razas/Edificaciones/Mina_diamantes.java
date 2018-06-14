@@ -9,16 +9,14 @@ package AbstractFactory.Razas.Edificaciones;
  *
  * @author soporte
  */
-public class Mina implements Edificaciones{
-
+public class Mina_diamantes implements Edificaciones{
     @Override
     public void crear_edificaciones() {
-        System.out.println("Tu mina ha sido creada con exito!");
-    }
-
-    @Override
-    public void atacar_edificaciones() {
-        System.out.println("Oh no! tu mina esta siendo atacada por el enemigo.");
+        System.out.println("Mina creada exitosamente.");
     }
     
+    @Override
+    public void atacar_edificaciones() {
+        System.out.println("Peligro, tumira esta siendo atacada por el enemigo!!");
+    }
 }

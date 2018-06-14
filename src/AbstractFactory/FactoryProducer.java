@@ -5,10 +5,21 @@
  */
 package AbstractFactory;
 
+import AbstractFactory.Razas.FactoryRazas;
+
 /**
  *
  * @author andreu
  */
 public class FactoryProducer {
+
+    public static AbstractFactory getFactory(String type) { 
+        switch(type){
+            case "Razas":
+                return new FactoryRazas();
+        }
+        return null;      
+    }
+    
     
 }

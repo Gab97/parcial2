@@ -9,7 +9,16 @@ package AbstractFactory.Razas.Milicia;
  *
  * @author soporte
  */
-public interface Milicia {
-    void crear_milicia();
-    void milicia_ataca();
+public class Milicia_sangre_pura implements Milicia{
+
+    @Override
+    public void crear_milicia() {
+        
+    }
+
+    @Override
+    public void milicia_ataca() {
+        
+    }
+    
 }

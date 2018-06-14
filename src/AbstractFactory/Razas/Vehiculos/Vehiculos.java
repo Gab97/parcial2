@@ -11,4 +11,5 @@ package AbstractFactory.Razas.Vehiculos;
  */
 public interface Vehiculos {
     void crear_vehiculos();
+    void atacar_vehiculos();
 }

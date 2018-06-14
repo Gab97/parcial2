@@ -9,14 +9,16 @@ package AbstractFactory.Razas.Edificaciones;
  *
  * @author soporte
  */
-public class Torre implements Edificaciones{
+public class Mina_moneda implements Edificaciones{
+
     @Override
     public void crear_edificaciones() {
-        System.out.println("Torre creada.");
+        System.out.println("Mima creada");
     }
-    
+
     @Override
     public void atacar_edificaciones() {
-        System.out.println("Peligro, tu torre esta siendo atacada por el enemigo!!");
+        System.out.println("Tu mina esta siendo atacada!!!");
     }
+    
 }
