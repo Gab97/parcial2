@@ -19,6 +19,5 @@ public class Mina_oro implements Edificaciones{
     @Override
     public void atacar_edificaciones() {
         System.out.println("Oh no! tu mina esta siendo atacada por el enemigo.");
-    }
-    
+    }   
 }

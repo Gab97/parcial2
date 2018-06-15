@@ -6,25 +6,19 @@
 
 package AbstractFactory.Razas.Edificaciones;
 import AbstractFactory.AbstractFactory;
-import AbstractFactory.Razas.Razas;
 
-public class FactoryEdificaciones implements AbstractFactory{
+
+public abstract class FactoryEdificaciones implements AbstractFactory{
     
-    public Edificaciones getEdificaciones(String type) {
-        switch (type) {
-            case "1":
+    public Edificaciones getEdificaciones(String edificacion) {
+        switch (edificacion) {
+            case "mn":
                 return new Mina_diamantes();
-            case "2":
+            case "mo":
                 return new Mina_oro();
-            case "3":
-                //return new Raza_los_que_no_son_nada();
+            case "mm":
+                return new Mina_moneda();
         }
         return null;
-    }
-
-    @Override
-    public Razas getRazas(String raza_sangre_pura) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    }  
 }

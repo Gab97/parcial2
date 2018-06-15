@@ -99,26 +99,47 @@ public class GabrielaSalgueroSWorld {
 
 //------------------------------------------------- Menu del juego ---------------------------------------------------------------------------------
             Scanner datos = new Scanner(System.in);
+            Scanner menu2 = new Scanner(System.in);
+            Scanner menu3 = new Scanner(System.in);
             
             
             do {
                 int seguir = 0;
 
                 do {
-                    int opcion = 0; 
+                    int  opcion2 = menu2.nextInt();
                     
                     System.out.println("-----------------------------  MENU  -------------------------------");
-                    System.out.println(" elige la raza: ");
-                    System.out.println("1- Raza sangre pura.");
-                    System.out.println("2- Raza sangre sucia.");
-                    System.out.println("3- Raza sangre normal.");
-                    opcion = datos.nextInt();
+                    System.out.println(nombre1 + " elige una opcion.");
+                    System.out.println("1- Edificaciones.");
+                    System.out.println("2- Vehiculos.");
+                    System.out.println("3- Milicia.");
+                    opcion2 = menu2.nextInt();
                     
                     try {
-                        opcion = datos.nextInt();
+                        opcion2 = menu2.nextInt();
+                        int  opcion3 = menu3.nextInt();
 
-                        switch (opcion) {
+                        switch (opcion2) {
                             case 1:
+                                System.out.println(nombre1+" elige una opcion.");
+                                System.out.println("1- Crear edificacion.");
+                                System.out.println("2- Recoleccion.");
+                                
+                                switch (opcion3){                                    
+                                    case 1:
+                                        System.out.println("1- Crear mina de diamantes.");
+                                        System.out.println("2- Crear mina de monedas.");
+                                        System.out.println("3- Crear mina de oro.");
+                                        
+                                        break;
+                                        
+                                    case 2:
+                                        break;
+                                }
+                                
+                                
+                                
                                 break;
                                 
                             case 2:
@@ -158,11 +179,11 @@ public class GabrielaSalgueroSWorld {
                                 
                         }
                         System.out.println("Para continuar digite 1...");
-                        seguir = datos.nextInt();
+                        seguir = menu2.nextInt();
 
                     } catch (InputMismatchException p) {
                         System.err.println("Por favor, Ingrese un número");
-                        datos.nextLine();
+                        menu2.nextLine();
                     }
                     
                 } while (seguir == 1);
