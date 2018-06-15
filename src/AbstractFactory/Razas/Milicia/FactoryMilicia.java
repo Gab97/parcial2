@@ -17,7 +17,5 @@ public class FactoryMilicia implements AbstractFactory{
     @Override
     public Razas getRazas(String raza_sangre_pura) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
+    } 
 }
