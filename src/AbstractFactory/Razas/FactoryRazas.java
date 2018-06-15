@@ -14,16 +14,15 @@ import AbstractFactory.AbstractFactory;
 public class FactoryRazas implements AbstractFactory {
 
     @Override
-    public Razas getRazas(String type) {
+    public  Razas getRazas(String type) {
         switch (type) {
-            case "RS":
+            case "pura":
                 return new Raza_sangre_pura();
-            case "RS2":
+            case "sucia":
                 return new Raza_sangre_sucia();
-            case "RS3":
+            case "normal":
                 return new Raza_sangre_normal();
         }
         return null;
-    }
-    
+    }  
 }

@@ -15,7 +15,7 @@ public class FactoryProducer {
 
     public static AbstractFactory getFactory(String type) { 
         switch(type){
-            case "Razas":
+            case "razas":
                 return new FactoryRazas();
         }
         return null;      

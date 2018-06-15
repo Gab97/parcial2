@@ -10,6 +10,7 @@ package AbstractFactory.Razas;
  * @author andreu
  */
 public interface Razas {
+    void crear_razas(String cadena); 
 
-    void crear_razas(); 
+    public void crear_razas(String raz, String raz1);
 }

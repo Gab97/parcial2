@@ -12,7 +12,7 @@ import AbstractFactory.Razas.Razas;
  * @author andreu
  */
 public interface AbstractFactory {
-
+    
     Razas getRazas(String type);
     
 }

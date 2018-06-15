@@ -12,7 +12,13 @@ package AbstractFactory.Razas;
 public class Raza_sangre_pura implements Razas {
 
     @Override
-    public void crear_razas() {
-        System.out.println("Raza pura sangre listo :v");
-    }   
+    public void crear_razas(String raz, String raz1) {
+        System.out.println("Raza pura sangre listo.");
+    }
+
+    @Override
+    public void crear_razas(String cadena) {
+        System.out.println("Raza pura sangre listo.");
+    }
+
 }

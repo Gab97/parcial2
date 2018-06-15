@@ -5,19 +5,21 @@
  */
 package AbstractFactory;
 
+import AbstractFactory.Razas.Raza_sangre_pura;
 import AbstractFactory.Razas.Razas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.awt.Menu;
+import java.lang.String;
 
 /**
  *
  * @author andreu
  */
 public class GabrielaSalgueroSWorld {
+
     public static void main(String[] args) {
-                GabrielaSalgueroSWorld menuVideojuego = GabrielaSalgueroSWorld.getInstance();
-                menuVideojuego.videojuego();
+        GabrielaSalgueroSWorld menuVideojuego = GabrielaSalgueroSWorld.getInstance();
+        menuVideojuego.videojuego();
     }
 
     private static GabrielaSalgueroSWorld menuVideojuego;
@@ -36,21 +38,69 @@ public class GabrielaSalgueroSWorld {
 
         Scanner jugador1 = new Scanner(System.in);
         Scanner jugador2 = new Scanner(System.in);
-        Scanner datos = new Scanner(System.in);
+        Scanner menu = new Scanner(System.in);
 
         int intento = 0;
 
+        System.out.println("-------------------------- Bienvenidos ------------------------------");
+        System.out.println("Jugador 1 - Ingrese el nombre: ");
+        String nombre1 = jugador1.nextLine();
+        System.out.println(nombre1 + " elige la raza: ");
+        System.out.println("1- Raza sangre pura.");
+        System.out.println("2- Raza sangre sucia.");
+        System.out.println("3- Raza sangre normal.");
+        String raz = jugador1.nextLine();
         
-                System.out.println("-------------------------- Bienvenidos ------------------------------");
-                System.out.println("Jugador 1 - Ingrese el nombre: ");
-                String nombre1 =jugador1.nextLine();
-                System.out.println("Jugador 2 - Ingrese el nombre: ");
-                String nombre2 =jugador2.nextLine();
-                
-        do {
-            int opcion = 0, seguir = 0, raza = 0;
+        System.out.println("Jugador 2 - Ingrese el nombre: ");
+        String nombre2 = jugador2.nextLine();
+        System.out.println(nombre2 + " elige la raza: ");
+        System.out.println("1- Raza sangre pura.");
+        System.out.println("2- Raza sangre sucia.");
+        System.out.println("3- Raza sangre normal.");
+        String raz1 = jugador2.nextLine();
+        
+        try {
+            int opcion = menu.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    AbstractFactory factory;
+
+                    factory = FactoryProducer.getFactory("razas");
+                    Razas pura = factory.getRazas("pura");
+                    pura.crear_razas(raz);
+                    Raza_sangre_pura ra = new Raza_sangre_pura();
+                    ra.crear_razas(raz,raz1);
+
+                case 2:
+                    factory = FactoryProducer.getFactory("Razas");
+                            Razas Raza_sangre_sucia = factory.getRazas("sucia");
+                            Raza_sangre_sucia.crear_razas(raz, raz1);
+                    break;
+
+                case 3:
+                    factory = FactoryProducer.getFactory("Razas");
+                    Razas Raza_sangre_normal = factory.getRazas("normal");
+                    Raza_sangre_normal.crear_razas(raz,raz1);
+                    break;
+
+                default:
+                    System.out.println("Por favor ingrese una opcion valida");
+            }
+
+        } catch (InputMismatchException e) {
+            System.err.println("Por favor, Ingrese un número");
+            menu.nextLine();
+
+            System.out.println("Jugador 2 - Ingrese el nombre: ");
+            //String nombre2 = jugador2.nextLine();
+
+            /*do {
+            int seguir = 0;
+            
             
             do {
+                int opcion = 0, raza = 0;
                 System.out.println("------------------  MENU --------------------");
                 System.out.println(nombre1 + " elige la raza: ");
                 System.out.println("1- Raza sangre pura.");
@@ -68,7 +118,9 @@ public class GabrielaSalgueroSWorld {
                                     
                                     factory = FactoryProducer.getFactory("Razas");
                                     Razas RS = factory.getRazas("RS");
-                                    RS.crear_razas();
+                                    //RS.crear_razas();
+                                    Raza_sangre_pura ra = new Raza_sangre_pura();
+                                    ra.crear_razas();
                                     break;
                                     
                                 case 2:
@@ -131,5 +183,7 @@ public class GabrielaSalgueroSWorld {
                 }
             } while (seguir == 1);
         } while (intento== 1);
+    }*/
+        }
     }
 }
